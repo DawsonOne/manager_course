@@ -38,5 +38,13 @@ public class CouseMstController {
         ResultUtil resultUtil = new ResultUtil();
         return resultUtil.success(courseList);
     }
+
+    @GetMapping("/courseSearch/{keyWord}")
+    @ApiOperation("瞎写一个进入test Branch")
+    public ResultVo courseSearch1(@PathVariable("keyWord") String keyword){
+        List<CouseMst> courseList = couseMstService.findLikeAll(keyword);
+        ResultUtil resultUtil = new ResultUtil();
+        return resultUtil.success(courseList);
+    }
 }
 
